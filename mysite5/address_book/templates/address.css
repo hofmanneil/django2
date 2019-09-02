@@ -1,0 +1,27 @@
+body {
+  background-color: beige;
+
+}
+
+h1{
+  font-size: 16px;
+  font-color: blue;
+}
+
+.FirstName{
+display:flex;
+inline-table;
+font-size: 12px;
+}
+
+.Surname{
+  display:flex;
+  inline-table;
+  font-size: 12px;
+}
+
+.Email{
+  display:flex;
+  inline-table;
+  font-size: 12px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Address Book</title>
+  </head>
+  <body>
+<h1>Contacts </h1>
+
+<ul>
+
+  {% for contact in contacts %}
+  <a href={% url 'contact' contact.id %} >
+        <li>
+            <div class='FirstName'> {{contact.first_name}}</div>
+            <div class='Surname'> {{contact.last_name}}</div>
+            <div class='Email'> {{contact.email_address}}</div>
+        </li>
+
+      {% endfor %}
+</ul>
+
+  <a href={% url 'new_contact' %}>Add New Contact</a>
+</a>
+  </body>
+</html>

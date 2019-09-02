@@ -1,0 +1,13 @@
+from address_book.models import Person
+person_list = Person.objects.all()
+print(person_list)
+ for i in person_list
+   print(i)
+   if email_address[i]==email_address[i]:
+   		print('email is use ,try again !!')
+
+person_list2 = address_book-person
+for i in address_book_person :
+	print(i)
+	if email_address[i]==email_address[i]:
+		print('This email is already in use try another 1')

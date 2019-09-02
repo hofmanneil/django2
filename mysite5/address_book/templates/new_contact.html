@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>new_contact</title>
+  </head>
+  <body>
+    <h1>Create New Contact</h1>
+    {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+      </ul>
+{% endif %}
+
+  <form method="POST" action="{% url 'new_contact' %}">
+    {% csrf_token %}
+    <label>First name:</label>
+    <input type="text" name="first_name">
+    <br>
+    <label>Last name:</label>
+    <input type="text" name="last_name">
+    <br>
+    <label>Phone number:</label>
+    <input type="text" name="phone_number">
+    <br>
+    <label>Email address:</label>
+    <input type="email" name="email_address">
+    <br>
+    <input type="submit" value="create contact">
+  </form>
+
+
+  </body>
+</html>
